@@ -1,3 +1,4 @@
+import component from "element-plus/es/components/tree-select/src/tree-select-option.mjs";
 import { createRouter, createWebHashHistory } from "vue-router";
 
 const routes = [
@@ -12,6 +13,24 @@ const routes = [
       title: '登录'
     },
     component: () => import('../view/Login.vue')
+  },
+  {
+    path: "/home",
+    name: "主页",
+    meta: {
+      title: "主页"
+    },
+    component: () => import('../view/Home.vue'),
+    redirect: '/index',
+    children: [
+      {
+        path: '/index',
+        meta: {
+          title: '首页'
+        },
+        component: () => import('../view/Welcome.vue')
+      },
+    ]
   }
 ];
 const router = createRouter({

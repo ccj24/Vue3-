@@ -4,7 +4,7 @@ import App from "./App.vue";
 import ElementPlus from "element-plus";
 import "element-plus/dist/index.css";
 import router from "./router/index.js";
-import * as Icons from '@element-plus/icons-vue'
+import * as Icons from '@element-plus/icons-vue';//引进icon图标
 
 // 创建应用实例
 const app = createApp(App);
