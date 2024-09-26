@@ -69,26 +69,26 @@ const rules = reactive({
 });
 // 登录校验
 const onSubmit = () => {
-  // router.push("/home"); //跳转至主页
-  console.log(ruleFormRef, "ruleFormRef");
-  if (!ruleFormRef) return;
-  ruleFormRef.value.validate(async (valid) => {
-    console.log(valid, "valid");
-    if (valid) {
-      const res = await userApi.login(form);
-      if (res.data) {
-        if (res.data.success) {
-          router.push("/home");
-        } else {
-          ElMessage.error(res.data.message);
-        }
-      } else {
-        ElMessage.error("服务器内部错误");
-      }
-    } else {
-      return false;
-    }
-  });
+  router.push("/home"); //跳转至主页
+  // console.log(ruleFormRef, "ruleFormRef");
+  // if (!ruleFormRef) return;
+  // ruleFormRef.value.validate(async (valid) => {
+  //   console.log(valid, "valid");
+  //   if (valid) {
+  //     const res = await userApi.login(form);
+  //     if (res.data) {
+  //       if (res.data.success) {
+  //         router.push("/home");
+  //       } else {
+  //         ElMessage.error(res.data.message);
+  //       }
+  //     } else {
+  //       ElMessage.error("服务器内部错误");
+  //     }
+  //   } else {
+  //     return false;
+  //   }
+  // });
 };
 // 表单重置
 const resetForm = () => {

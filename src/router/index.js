@@ -1,3 +1,8 @@
+/*
+ * @description: 
+ * @param: params
+ * @return: 
+ */
 import component from "element-plus/es/components/tree-select/src/tree-select-option.mjs";
 import { createRouter, createWebHashHistory } from "vue-router";
 
@@ -29,6 +34,20 @@ const routes = [
           title: '首页'
         },
         component: () => import('../view/Welcome.vue')
+      },
+      {
+        path: '/user/list',
+        meta: {
+          title: '用户管理'
+        },
+        component: () => import('../view/user/Index.vue'),
+      },
+      {
+        path: '/user/detail',
+        meta: {
+          title: '用户详情'
+        },
+        component: () => import('../view/user/Detail.vue'),
       },
     ]
   }
