@@ -62,6 +62,7 @@ const form = reactive({
   password: "",
 });
 const ruleFormRef = ref();
+const { pxoxy } = getCurrentInstance();
 // 新建校验规则
 const rules = reactive({
   username: [{ required: true, message: "账号不能为空", trigger: "blur" }],
@@ -69,6 +70,7 @@ const rules = reactive({
 });
 // 登录校验
 const onSubmit = () => {
+  // pxoxy.$commonJs.changeView("/home");
   router.push("/home"); //跳转至主页
   // console.log(ruleFormRef, "ruleFormRef");
   // if (!ruleFormRef) return;

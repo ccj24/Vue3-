@@ -63,7 +63,7 @@ router.beforeEach((to, from, next) => {
   if (to.meta.title) {
     document.title = "酷我锦后台管理系统" + to.meta.title;
     next();
-  } F
+  } 
   // 放行登录页
   if (to.path === "login") {
     return next();
